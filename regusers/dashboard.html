@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="reg-tit-big-screen">
+        <h1>Dashboard</h1>
+    </div>
+    <div class="reg-wrappers">
+        <header>
+            <a class="mobile-only-icon" href="#"><img src="/assets/icon/logo.svg" alt=""></a>
+            <h1 class="mobile-only-icon">X cash flux</h1>
+            <div onclick="openMenu()">
+                <img class="mobile-only-icon" src="/assets/icon/pie.png" alt="" onclick="openMenu()">
+            </div>
+        </header>
+    
+        <main class="dash-main" onclick="openMenu()">
+            <section class="dash-top-bar-con">
+                <div class="cur-bal">
+                    <p>current balance</p>
+                    <p>3,000</p>
+                </div>
+
+                <div class="rate-info">
+                    <p>
+                        <span>RATE: </span>
+                        <span>0.5</span>
+                    </p>
+                    <p>
+                        <span>FLUX CREW: </span>
+                        <span>0.5</span>
+                    </p>
+                    <p>
+                        <span>TOTAL: </span>
+                        <span>0.5</span>
+                    </p>
+                </div>
+
+                <div class="days-bar-con">
+                    <progress value="0.5">
+                    </progress>
+                    <p>Daily limit</p>
+                </div>
+
+            </section>
+    
+            <section class="earn-con">
+                <a href="#" class="earn-but" id="earn-button">
+                    <h1>EARN</h1>
+                </a>
+            </section>
+    
+            <section class="dash-bot">
+                <div class="motiv-con">
+                    <p>
+                        <q>this the qoute of the man that i made at that time of the work but forget am just writing random words</q>
+
+                    </p>
+                    <p class="quote-author">~David Mike~</p>
+                </div>
+    
+                <a href="#" class="ref-link">copy referer link</a>
+            </section>
+        </main>
+    
+        <footer>
+            <nav>
+                <a href="./flux-crew.html" class="main-nav-link-p">
+                    <div class="nav-i-con">
+                        <img src="/assets/icon/nav-icon/flux-crew-null.png" alt="">
+                    </div>
+                    <div class="nav-t-con">
+                        <p>Flux Crew</p>
+                    </div>
+                </a>
+
+                <a href="./dashboard.html" class="main-nav-link-p">
+                    <div class="nav-i-con">
+                        <img class="logo-dash-nav" src="/assets/icon/logo.svg" alt="">
+                    </div>
+                    <div class="nav-t-con">
+                        <p>Dash board</p>
+                    </div>
+                </a>
+
+                <a href="./personal-info.html" class="main-nav-link-p">
+                    <div class="nav-i-con">
+                        <img src="/assets/icon/nav-icon/personal-info-null.png" alt="">
+                    </div>
+                    <div class="nav-t-con">
+                        <p>Personal Info</p>
+                    </div>
+                    
+                </a>
+                <ul class="nav-li fullscreen-only" id="nav-li">
+                    <div class="closing-nav-con">
+                        <img onclick="closeMenu()" class="closing-nav"src="/assets/icon/close-nav.svg" alt="">
+                    </div>
+                    <div class="nav-three-main-side-con mobile-only">
+                        
+                        <li>
+                            <a href="./dashboard.html" class="main-nav-link-p">
+                                <div class="nav-i-con">
+                                    <img class="logo-dash-nav" src="/assets/icon/logo.svg" alt="">
+                                </div>
+                                <div class="nav-t-con">
+                                    <p>Dash board</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        
+                        <li>
+                            <a href="./flux-crew.html" class="main-nav-link-p">
+                                <div class="nav-i-con">
+                                    <img src="/assets/icon/nav-icon/flux-crew-null.png" alt="">
+                                </div>
+                                <div class="nav-t-con">
+                                    <p>Flux Crew</p>
+                                </div>
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="./personal-info.html" class="main-nav-link-p">
+                                <div class="nav-i-con">
+                                    <img src="/assets/icon/nav-icon/personal-info-null.png" alt="">
+                                </div>
+                                <div class="nav-t-con">
+                                    <p>Personal Info</p>
+                                </div>
+                                
+                            </a>
+                        </li>
+                        
+                    </div>
+                    
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="../html/team.html">Our Team</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../html/about.html">About Us</a></li>
+                    <li><a href="#">privacy Policy</a></li>
+                    <li><a href="#">Terms and Con</a></li>
+                    <li><a href="#">Legal Info</a></li>
+                    <li><a href="#">Cookies Info</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</body>
+<script>
+    const menu = document.querySelector('#nav-li');
+    function openMenu()
+    {
+        menu.classList.add('display');
+    }
+    function closeMenu()
+    {
+        menu.classList.remove('display');
+    }
+</script>
+</html>
