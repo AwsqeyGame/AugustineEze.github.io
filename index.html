@@ -67,10 +67,19 @@
             <h1>X CASH FLUX</h1>
         </a>
 
+        
+
         <div class="header-signs-con">
             <a href="/login-html/login.html" class="sign-button">sign up</a>
             <a href="/regusers/dashboard.html" class="sign-button">login</a>
+
+            <div class="pie-container" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </div>
+
     </header>
 
     <main>
@@ -294,7 +303,7 @@
                         </div>
 
                         <div class="test-card">
-                            <img class="test-imgs" src="/assets/images/testimonies-images/Okafor-John.png" alt="">
+                            <img class="test-imgs" src="/assets/images/testimonies-images/Okafor-John.jpg" alt="">
                             <div class="test-def">
                                 <h5>Okafor John E</h5>
                                 <p>
@@ -304,7 +313,7 @@
                         </div>
                         
                         <div class="test-card">
-                            <img class="test-imgs" src="/assets/images/testimonies-images/Adelola-Abimbola.png" alt="">
+                            <img class="test-imgs" src="/assets/images/testimonies-images/Adelola-Abimbola.jpg" alt="">
                             <div class="test-def">
                                 <h5>Adelola Abimbol A</h5>
                                 <p>
@@ -344,7 +353,7 @@
                         </div>
 
                         <div class="test-card">
-                            <img class="test-imgs" src="/assets/images/testimonies-images/Aliyu-Aisha.png" alt="">
+                            <img class="test-imgs" src="/assets/images/testimonies-images/Aliyu-Aisha.jpg" alt="">
                             <div class="test-def">
                                 <h5>Aliyu Aisha T</h5>
                                 <p>
@@ -362,7 +371,7 @@
                 <div class="def-sec">
                     <h3>About X Cash Flux</h3>
                     <p>
-                        X cash flux is a mining platform designed for nigerians. This is a code to make extra money while doing what ever your doing. The platform offers a simplified, one-click earning solution. Users can seamlessly mine on the go maximizing their earnings with low entry barries. All it takes is just a click to financial freedom. We add extra to your cash so that it can flow.<a href="#">learn more....</a>
+                        X cash flux is a mining platform designed for nigerians. This is a code to make extra money while doing what ever your doing. The platform offers a simplified, one-click earning solution. Users can seamlessly mine on the go maximizing their earnings with low entry barries. All it takes is just a click to financial freedom. We add extra to your cash so that it can flow.<a href="./html/about.html">learn more....</a>
                     </p>
                 </div>
                 
@@ -508,13 +517,13 @@
 
             <div class="footer-links footer-parts">
                 <h5>Our Company</h5>
-                <ul>
+                <ul class="our-com-foot-li">
                     <li><a href="/html/about.html">About Us</a></li>
                     <li><a href="/html/team.html">Our Team</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of use</a></li>
-                    <li><a href="#">cookies info</a></li>
-                    <li><a href="#">Legal info</a></li>
+                    <li><a href="./html/dox/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="./html/dox/terms-of-use.html">Terms of use</a></li>
+                    <li><a href="./html/dox/cookies-info.html">cookies info</a></li>
+                    <li><a href="./html/dox/legal-info.html">Legal info</a></li>
                 </ul>
             </div>
 
@@ -595,6 +604,12 @@
           });
         }
       </script>
+      
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
     
 </body>
 </html>

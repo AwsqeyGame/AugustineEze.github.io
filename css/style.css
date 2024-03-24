@@ -22,6 +22,7 @@ img{
 a{
     text-decoration: none;
 }
+
 .bg-img{
     background-size: cover;
     background-position: center;
@@ -49,6 +50,9 @@ a{
     box-shadow: none;
 }
 .break-part h3{
+    font-size: xx-large;
+    padding-top: 0.4em;
+    letter-spacing: 0.08em;
     color: white;
 }
 header{
@@ -190,7 +194,7 @@ section{
 .test-imgs{
     width: min(80%, 200px);
     border-radius: 50%;
-    padding: 1em;
+    padding: 15px;
     background-color: yellow;
 }
 .test-card{
@@ -206,7 +210,7 @@ section{
     margin-top: 0;
 }
 .floating-tit{
-    background-color: #006609;
+    background-color: #014d08;
     border-top: 5px solid #004206;
     border-left: 5px solid #004206;
     border-right: 5px solid #004206;
@@ -214,6 +218,7 @@ section{
     padding: 0.4em;
     margin-top: 1em;
     margin-left: 0.5em;
+    color: white;
 }
 .test-card{
     min-width: 60%;
@@ -309,7 +314,7 @@ h1.floating-tit{
     padding: 0.3em;
 }
 .team-card{
-    min-width: 90%;
+    min-width: 80%;
 }
 .team-def h4{
     font-size: x-large;
@@ -332,7 +337,8 @@ h1.floating-tit{
     margin: 1em auto;
     padding: 0.4em;
     border: 1px solid #000;
-    color: #000;
+    color: #ffff0060;
+    background-color: #003b05;
 }
 .team-hero{
     background-image: url(/assets/images/focus\ on\ making\ moeny.png);
@@ -357,9 +363,37 @@ h1.floating-tit{
     margin-left: 30px;
     margin-top: 30px;
 }
+.our-com-foot-li li{
+    margin: 1em;
+}
+a:hover, button:hover{
+    transition: all 0.2s ease-out;
+    transform: translate(2px, -2px);
+    box-shadow: -2px 2px 5px 0px #333;
+}
 
-
-
+.pie-container {
+    display: inline-block;
+    cursor: pointer;
+}
+  
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+  
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+  
+.change .bar2 {opacity: 0;}
+  
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
 
 
 

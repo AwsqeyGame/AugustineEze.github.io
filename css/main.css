@@ -14,7 +14,7 @@ header{
     width: 100%;
     position: sticky;
     top: 0;
-    z-index: -1;
+    z-index: 1;
 }
 .fullscreen-only{
     display: none;
@@ -42,6 +42,7 @@ footer{
     width: 100%;
     margin: 0;
     background-color: #005700;
+    z-index: 10;
 }
 header img{
     width: 40px;
@@ -156,10 +157,15 @@ progress{
     border-radius: 10px;
     margin-top: 0;
     background-color: #054800;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 .days-bar-con p{
     text-align: center;
-    color: green;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: 0;
 }
 .earn-but{
     background-color: #008000;
@@ -336,6 +342,8 @@ td{
     margin: 0;
 }
 
+
+
 @media only screen and (max-width: 700px)
 {
 #nav-li{
@@ -355,6 +363,12 @@ td{
 .nav-li{
     transform: translateX(600%);
     transition: transform .5s ease-in-out;
+}
+.nav-li li{
+    margin: 0.4em;
+}
+.nav-li .nav-li-a{
+    margin: 1.1em;
 }
 }
 
@@ -523,7 +537,7 @@ td{
         color: #2c7300;
         font-weight: bold;
         text-align: left;
-        height: min(80%, 300px);
+        height: min(50%, 220px);
         display: flex;
         flex-direction: column;
         justify-content: space-around;
