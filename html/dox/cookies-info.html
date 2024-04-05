@@ -13,19 +13,39 @@
     <header>
         <a href="/index.html" class="icon-holder">
             <img src="/assets/icon/logo.svg" alt="">
-            <h1>COOKIES INFO</h1>
+            <h1>Cookies Info</h1>
         </a>
 
         
+        <div class="links-navs-header">
+            <div class="top-navigation">
+                <a class="head-nav-li" href="/index.html">Home</a>
+                <a class="head-nav-li" href="../about.html">About Us</a>
+                <a class="head-nav-li" href="../team.html">Our Team</a>
+                <a class="head-nav-li" href="/regusers/dashboard.html">Dashboard</a>
+                <a class="head-nav-li" href="/regusers/flux-crew.html">Flux Crew</a>
+                <a class="head-nav-li" href="/regusers/personal-info.html">Personal Info</a>
+                <a class="head-nav-li" href="/regusers/profile.html">Profile</a>
+            </div>
 
-        <div class="header-signs-con">
-            <img src="/assets/icon/pie.png" alt="">
-            <!-- <a href="#" class="sign-button">sign up</a>
-            <a href="#" class="sign-button">login</a> -->
+            <div class="header-signs-con">
+                <a href="/login-html/signup.html" class="sign-button">sign up</a>
+                <a href="/login-html/login.html" class="sign-button">login</a>
+    
+                
+            </div>
+    
+            <div id="nav-menu" class="pie-container" onclick="openCloseNav()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </div>
+        
+
     </header>
 
-    <main>
+    <main onclick="closeNav()">
         <div class="wrapper">
             <h3>Cookies Info</h3>
 
@@ -139,6 +159,33 @@
             <p>&copy; All Right Reserved</p>
         </div>
     </footer>
-    
+
+    <!-- header navigation script -->
+    <script>
+        let naved = false;
+        const navigation = document.querySelector(".top-navigation");
+        const navMenu = document.querySelector("#nav-menu");
+        function openCloseNav() {
+            if(naved)
+            {
+                closeNav();
+            }
+            else{
+                openNav();
+            }
+        }
+
+        function openNav(){
+            navMenu.classList.add("change");
+            navigation.classList.add("open-navigation");
+            naved = true;
+        }
+
+        function closeNav(){
+            navMenu.classList.remove("change");
+            navigation.classList.remove("open-navigation");
+            naved = false;
+        }
+    </script>
 </body>
 </html>

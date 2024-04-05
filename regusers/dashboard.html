@@ -16,12 +16,29 @@
         <header>
             <a class="mobile-only-icon" href="#"><img src="/assets/icon/logo.svg" alt=""></a>
             <h1 class="mobile-only-icon">X cash flux</h1>
-            <div onclick="openMenu()">
+            <!-- <div onclick="openMenu()">
                 <img class="mobile-only-icon" src="/assets/icon/pie.png" alt="">
+            </div> -->
+            <div class="links-navs-header">
+                <div class="top-navigation">
+                    <a class="head-nav-li" href="./profile.html">Profile</a>
+                    <a class="head-nav-li" href="/index.html">Home</a>
+                    <a class="head-nav-li" href="/html/about.html">About Us</a>
+                    <a class="head-nav-li" href="/html/team.html">Our Team</a>
+                    <!-- <a class="head-nav-li active-nav-li" href="./dashboard.html">Dashboard</a>
+                    <a class="head-nav-li" href="./flux-crew.html">Flux Crew</a>
+                    <a class="head-nav-li" href="./personal-info.html">Personal Info</a> -->
+                </div>
+        
+                <div id="nav-menu" class="pie-container" onclick="openCloseNav()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
             </div>
         </header>
     
-        <main class="dash-main" onclick="closeMenu()">
+        <main class="dash-main" onclick="closeNav()">
             <section class="dash-top-bar-con">
                 <div class="cur-bal">
                    <p>current balance</p>
@@ -70,7 +87,7 @@
             </section>
         </main>
     
-        <footer>
+        <footer onclick="closeNav()">
             <nav>
                 <a href="./flux-crew.html" class="main-nav-link-p">
                     <div class="nav-i-con">
@@ -145,8 +162,8 @@
                     
                     <li class="nav-li-a"><a href="profile.html">Profile</a></li>
                     <li class="nav-li-a"><a href="../index.html">Home</a></li>
-                    <li class="nav-li-a"><a href="../html/team.html">Our Team</a></li>
                     <li class="nav-li-a"><a href="../html/about.html">About Us</a></li>
+                    <li class="nav-li-a"><a href="../html/team.html">Our Team</a></li>
                     <!-- <li class="nav-li-a"><a href="#">privacy Policy</a></li>
                     <li class="nav-li-a"><a href="#">Terms and Con</a></li>
                     <li class="nav-li-a"><a href="#">Legal Info</a></li>
@@ -165,6 +182,34 @@
     function closeMenu()
     {
         menu.classList.remove('display');
+    }
+</script>
+
+<!-- header navigation script -->
+<script>
+    let naved = false;
+    const navigation = document.querySelector(".top-navigation");
+    const navMenu = document.querySelector("#nav-menu");
+    function openCloseNav() {
+        if(naved)
+        {
+            closeNav();
+        }
+        else{
+            openNav();
+        }
+    }
+
+    function openNav(){
+        navMenu.classList.add("change");
+        navigation.classList.add("open-navigation");
+        naved = true;
+    }
+
+    function closeNav(){
+        navMenu.classList.remove("change");
+        navigation.classList.remove("open-navigation");
+        naved = false;
     }
 </script>
 </html>

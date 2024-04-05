@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/slide.css">
 </head>
 <body>
-    <div class="slideshow-container">
+    <div class="slideshow-container"  onclick="closeNav()">
         <div class="slide-bg"></div>
         <div class="mySlides" id="img-slide-1" style="background-image: url(/assets/images/hero-images/effortless\ pain\ point\ blur.png);">
             <div class="text hero">
@@ -68,21 +68,35 @@
         </a>
 
         
+        <div class="links-navs-header">
+            <div class="top-navigation">
+                <a class="head-nav-li active-nav-li" href="./index.html">Home</a>
+                <a class="head-nav-li" href="./html/about.html">About Us</a>
+                <a class="head-nav-li" href="./html/team.html">Our Team</a>
+                <a class="head-nav-li" href="./regusers/dashboard.html">Dashboard</a>
+                <a class="head-nav-li" href="./regusers/flux-crew.html">Flux Crew</a>
+                <a class="head-nav-li" href="./regusers/personal-info.html">Personal Info</a>
+                <a class="head-nav-li" href="./regusers/profile.html">Profile</a>
+            </div>
 
-        <div class="header-signs-con">
-            <a href="/login-html/login.html" class="sign-button">sign up</a>
-            <a href="/regusers/dashboard.html" class="sign-button">login</a>
-
-            <div class="pie-container" onclick="myFunction(this)">
+            <div class="header-signs-con">
+                <a href="/login-html/signup.html" class="sign-button">sign up</a>
+                <a href="/login-html/login.html" class="sign-button">login</a>
+    
+                
+            </div>
+    
+            <div id="nav-menu" class="pie-container" onclick="openCloseNav()">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
         </div>
+        
 
     </header>
 
-    <main>
+    <main onclick="closeNav()">
         <div class="wrapper">
             <section>
                 <div class="def-sec">
@@ -605,9 +619,31 @@
         }
       </script>
       
+    <!-- header navigation script -->
     <script>
-        function myFunction(x) {
-            x.classList.toggle("change");
+        let naved = false;
+        const navigation = document.querySelector(".top-navigation");
+        const navMenu = document.querySelector("#nav-menu");
+        function openCloseNav() {
+            if(naved)
+            {
+                closeNav();
+            }
+            else{
+                openNav();
+            }
+        }
+
+        function openNav(){
+            navMenu.classList.add("change");
+            navigation.classList.add("open-navigation");
+            naved = true;
+        }
+
+        function closeNav(){
+            navMenu.classList.remove("change");
+            navigation.classList.remove("open-navigation");
+            naved = false;
         }
     </script>
     

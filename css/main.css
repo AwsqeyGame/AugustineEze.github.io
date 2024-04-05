@@ -343,7 +343,6 @@ td{
 }
 
 
-
 @media only screen and (max-width: 700px)
 {
 #nav-li{
@@ -412,7 +411,9 @@ td{
     font-size: large;
     color: #000;
 }
-
+.top-navigation {
+    background-color: rgb(1 93 0);
+}
 
 
 
@@ -431,7 +432,7 @@ td{
 }
 @media only screen and (min-width: 700px)
 {
-    .mobile-only{
+    .mobile-only, .links-navs-header{
         display: none;
     }
     body{
