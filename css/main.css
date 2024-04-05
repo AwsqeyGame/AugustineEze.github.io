@@ -176,15 +176,66 @@ progress{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+
+
+
+
+    /* testing image background */
+    background-image: repeating-linear-gradient(
+        45deg,
+        #007000,
+        #007000 10px,
+        #006000 10px,
+        #006000 30px
+    );
 }
 .earn-but h1{
-    font-size: xx-large;
+    font-size: 3.5em;
     color: #ff0;
 }
+.earn-but p{
+    color: #aeff00;
+    font-size: large;
+}
 #earn-button{
-    background-image: url(/assets/icon/mine.png);
+    /* background-image: url(/assets/icon/mine.png); */
     background-position: center;
     background-size: cover;
+}
+#earning-but{
+    justify-content: space-around;
+    position: relative;
+}
+@keyframes earningstate {
+    0% {content: "";}
+    25% {content: ".";}
+    50% {content: "..";}
+    75% {content: "...";}
+    100% {content: "....";}
+}
+.earning-load-text::after{
+    content: "";
+    display: inline-block;
+    animation: earningstate 2s steps(4, end) infinite;
+}
+.earning-timer-con{
+    background-color: yellow;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 100%;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+#clain-but p{
+    font-size: 2em;
+    color: #ff0;
 }
 .motiv-con{
     min-height: 55%;
@@ -611,4 +662,7 @@ main{
 }
 .display{
     transform: translateX(00%);
+}
+.hide{
+    display: none;
 }

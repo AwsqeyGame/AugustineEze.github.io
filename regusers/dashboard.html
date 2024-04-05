@@ -42,21 +42,21 @@
             <section class="dash-top-bar-con">
                 <div class="cur-bal">
                    <p>current balance</p>
-                    <p>3,000</p>
+                    <p><span>&#8358;</span>3,000</p>
                 </div>
 
                 <div class="rate-info">
                     <p>
                         <span>RATE: </span>
-                        <span>0.5</span>
+                        <span>&#8358;312.5</span>
                     </p>
                     <p>
                         <span>FLUX CREW: </span>
-                        <span>0.5</span>
+                        <span>&#8358;55.4</span> <span>(0)</span>
                     </p>
                     <p>
                         <span>TOTAL: </span>
-                        <span>0.5</span>
+                        <span>&#8358;312.5</span>
                     </p>
                 </div>
 
@@ -71,6 +71,20 @@
             <section class="earn-con">
                 <a href="#" class="earn-but" id="earn-button">
                     <h1>EARN</h1>
+                </a>
+                <a href="#" class="earn-but hide" id="earning-but">
+                    <div class="earning-timer-con">
+                        <span id="earning-min">59</span>
+                        <span>:</span>
+                        <span id="earning-sec">59</span>
+                    </div>
+                    <P class="earning-load-text">EARNING<span></span></P>
+                    <h1><span>&#8358;</span>100</h1>
+                    <P class="earning-load-text">EARNING<span></span></P>
+                </a>
+                <a href="#" class="earn-but hide" id="clain-but">
+                    <h1>CLAIM!!</h1>
+                    <P>&#8358;4,000</P>
                 </a>
             </section>
     
@@ -211,5 +225,55 @@
         navigation.classList.remove("open-navigation");
         naved = false;
     }
+</script>
+<script>
+    const earnBut = document.querySelector("#earn-button");
+    const earningBut = document.querySelector("#earning-but");
+    const claimBut = document.querySelector("#clain-but");
+    const earningMin = document.getElementById("earning-min");
+    const earnSec = document.getElementById("earning-sec");
+
+    let min = 59;
+    let sec = 60;
+
+    earnBut.addEventListener('click', () => {
+            earningBut.classList.remove('hide');
+            earnBut.classList.add('hide');
+            claimBut.classList.add("hide");
+        }
+    );
+
+    earningBut.addEventListener('click', () => {
+        earningBut.classList.add('hide');
+        earnBut.classList.add('hide');
+        claimBut.classList.remove("hide");
+    })
+
+    claimBut.addEventListener('click', () => {
+        earningBut.classList.add('hide');
+        earnBut.classList.remove('hide');
+        claimBut.classList.add("hide");
+    })
+
+    const countDownInterval = setInterval(() => {
+        sec--;
+        earnSec.textContent = sec < 10 ? "0" + sec : sec;
+
+        //set min
+        if(sec === 0)
+        {
+            min--;
+            if(min === 0)
+            {
+                min = 59;
+            }
+            sec = 59;
+
+            earnSec.textContent = sec;
+            earningMin.textContent = min > 10 ? "0" + min : min;
+        }
+    },1000)
+
+
 </script>
 </html>
