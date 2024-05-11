@@ -69,7 +69,7 @@ body{
     background-color: #fff;
 }
 main{
-    overflow: auto;
+    overflow: scroll;
     background-image: linear-gradient(to right, #aeffa371, #f9ffa3, #f9ffa3, #f9ffa3, #f9ffa3, #aeffa371);
 }
 section, section.flux-sec{
